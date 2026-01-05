@@ -1536,15 +1536,15 @@
             if (integrityLevel > 60) {
                 fill.style.background = 'linear-gradient(90deg, #48bb78, #38a169)';
                 status.textContent = 'Your CIB is intact. You can cause transformations repeatedly. You are a Constructor.';
-                status.style.color = var(--success);
+                status.style.color = '#48bb78';
             } else if (integrityLevel > 30) {
                 fill.style.background = 'linear-gradient(90deg, #ed8936, #dd6b20)';
                 status.textContent = 'Your CIB is degrading. You\'re becoming less effective. Restore before you become a Reactant.';
-                status.style.color = var(--warning);
+                status.style.color = '#ed8936';
             } else {
                 fill.style.background = 'linear-gradient(90deg, #f56565, #e53e3e)';
                 status.textContent = 'Your CIB is shattered. You\'ve become a Reactant. You can cause transformation once, then you\'re burned out. Restore immediately.';
-                status.style.color = var(--danger);
+                status.style.color = '#f56565';
             }
         }
 
@@ -1564,7 +1564,7 @@
             if (physics === 'violates') {
                 result.className = 'analysis-result impossible';
                 result.innerHTML = `
-                    <h3 style="color: var(--danger); margin-bottom: 10px;">❌ IMPOSSIBLE</h3>
+                    <h3 style="color: #f56565; margin-bottom: 10px;">❌ IMPOSSIBLE</h3>
                     <p><strong>"${name}"</strong> violates the laws of physics.</p>
                     <p style="margin-top: 10px;">This problem is <strong>impossible</strong> to solve—it's forbidden by physical law. No amount of knowledge can change this. We must accept this constraint and work within it.</p>
                     <p style="margin-top: 15px; font-style: italic;">Examples: Faster-than-light travel, perpetual motion machines, creating energy from nothing.</p>
@@ -1572,7 +1572,7 @@
             } else {
                 result.className = 'analysis-result possible';
                 result.innerHTML = `
-                    <h3 style="color: var(--success); margin-bottom: 10px;">✅ SOLUBLE</h3>
+                    <h3 style="color: #48bb78; margin-bottom: 10px;">✅ SOLUBLE</h3>
                     <p><strong>"${name}"</strong> does not violate the laws of physics.</p>
                     <p style="margin-top: 10px;">This problem is <strong>soluble</strong>. If it's allowed by physics, the only barrier is knowledge. The evil of this problem is caused by our current <em>lack of knowledge</em>, not by the nature of reality.</p>
                     <p style="margin-top: 15px;"><strong>Your duty:</strong> Create or acquire the knowledge (CIB) required to solve it. This transforms you from passive observer to active Constructor.</p>
@@ -1599,13 +1599,13 @@
             if (physics === 'impossible') {
                 result.className = 'dashboard-result redesign';
                 result.innerHTML = `
-                    <h3 style="color: var(--danger);">❌ Cannot Proceed</h3>
+                    <h3 style="color: #f56565;">❌ Cannot Proceed</h3>
                     <p>This transformation violates the laws of physics. It is <strong>impossible</strong>. You must redefine your task to align with what's physically possible.</p>
                 `;
             } else if (knowledge === 'no') {
                 result.className = 'dashboard-result learn';
                 result.innerHTML = `
-                    <h3 style="color: var(--warning);">📚 Your Duty: Learn First</h3>
+                    <h3 style="color: #ed8936;">📚 Your Duty: Learn First</h3>
                     <p><strong>Task:</strong> ${task}</p>
                     <p style="margin-top: 10px;">You lack the necessary CIB (knowledge) to act as Constructor here. <strong>Do NOT act yet.</strong> Acting without knowledge makes you a chaotic variable—you'll cause more harm than good.</p>
                     <p style="margin-top: 15px;"><strong>Action:</strong> Your ethical duty is to <em>learn</em>. Acquire the specific knowledge required. Then return to this dashboard.</p>
@@ -1613,7 +1613,7 @@
             } else if (cost === 'destructive') {
                 result.className = 'dashboard-result redesign';
                 result.innerHTML = `
-                    <h3 style="color: var(--danger);">🔄 Redesign Required</h3>
+                    <h3 style="color: #f56565;">🔄 Redesign Required</h3>
                     <p><strong>Task:</strong> ${task}</p>
                     <p style="margin-top: 10px;">This approach will destroy your ability to function tomorrow—you'll become a <strong>Reactant</strong>, not a Constructor. You cannot sustain this.</p>
                     <p style="margin-top: 15px;"><strong>Action:</strong> Redesign your approach. Build a BioBond/team to distribute the load. Change the timeline. Protect your Code Integrity.</p>
@@ -1621,7 +1621,7 @@
             } else if (knowledge === 'partial' || cost === 'needs-redesign') {
                 result.className = 'dashboard-result learn';
                 result.innerHTML = `
-                    <h3 style="color: var(--warning);">⚠️ Proceed With Caution</h3>
+                    <h3 style="color: #ed8936;">⚠️ Proceed With Caution</h3>
                     <p><strong>Task:</strong> ${task}</p>
                     <p style="margin-top: 10px;">You have some knowledge and sustainable approach, but gaps remain. You can begin, but recognize limitations.</p>
                     <p style="margin-top: 15px;"><strong>Action:</strong> Start small. Learn as you go. Build support systems. Monitor your Code Integrity continuously.</p>
@@ -1629,7 +1629,7 @@
             } else {
                 result.className = 'dashboard-result proceed';
                 result.innerHTML = `
-                    <h3 style="color: var(--success);">✅ Proceed as Constructor</h3>
+                    <h3 style="color: #48bb78;">✅ Proceed as Constructor</h3>
                     <p><strong>Task:</strong> ${task}</p>
                     <p style="margin-top: 10px;">✓ Physically possible<br>✓ You have the CIB (knowledge)<br>✓ Sustainable approach</p>
                     <p style="margin-top: 15px;"><strong>Action:</strong> Proceed. You are acting as a Constructor—you can cause this transformation while retaining capacity for future transformations. This is ethical action.</p>
